@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:drag_edge="left"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:tag="Bottom1">
+
+            <ImageButton
+                android:id="@+id/ivAlarm"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
+
+            <ImageButton
+                android:id="@+id/ivDelete"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccessory" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llNote"
+            android:background="@drawable/item_selector"
+            android:orientation="vertical"
+            android:elevation="5dp"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProject"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccessory"/>
+
+                <com.github.curioustechizen.ago.RelativeTimeTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccessory" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="marquee"
+                android:textSize="16sp"
+                android:text="Income tax Return"
+                android:textColor="@color/colorPrimary"
+                android:tag="Hover"/>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textSize="14sp"
+                android:ellipsize="marquee"
+                android:text="File income tax return. Get ITR V form from samsung. This is just a test to check the limit"
+                android:tag="Hover"/>
+        </LinearLayout>
+    </com.daimajia.swipe.SwipeLayout>
+</LinearLayout>
